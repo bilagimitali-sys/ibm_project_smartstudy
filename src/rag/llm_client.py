@@ -16,9 +16,9 @@ from groq import Groq
 load_dotenv()
 
 # Default model — fast and capable; can be overridden per call
-DEFAULT_MODEL = "llama3-8b-8192"
+DEFAULT_MODEL = "qwen/qwen3.8-27b"
 # Larger model for complex generation tasks
-LARGE_MODEL = "llama3-70b-8192"
+LARGE_MODEL = "qwen/qwen3.8-27b"
 
 
 def _get_client() -> Groq:
