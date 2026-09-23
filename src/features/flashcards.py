@@ -83,6 +83,6 @@ BACK: [Answer or definition — keep it under 3 sentences]
 
 Generate all {num_cards} flashcards now.
 """
-    raw = generate_large(prompt, system=SYSTEM, max_tokens=4096)
+    raw = generate_large(prompt, system=SYSTEM, max_tokens=1800)
     cards = _parse_flashcards(raw)
     return raw, cards

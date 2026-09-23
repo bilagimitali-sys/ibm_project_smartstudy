@@ -62,4 +62,4 @@ Include a mix of:
 
 Generate exactly {num_questions} questions now.
 """
-    return generate_large(prompt, system=SYSTEM, max_tokens=4096)
+    return generate_large(prompt, system=SYSTEM, max_tokens=1800)

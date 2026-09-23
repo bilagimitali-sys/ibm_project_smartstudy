@@ -16,9 +16,9 @@ from groq import Groq
 load_dotenv()
 
 # Default model — fast and capable; can be overridden per call
-DEFAULT_MODEL = "qwen/qwen3.8-27b"
+DEFAULT_MODEL = "openai/gpt-oss-120b"
 # Larger model for complex generation tasks
-LARGE_MODEL = "qwen/qwen3.8-27b"
+LARGE_MODEL = "openai/gpt-oss-120b"
 
 
 def _get_client() -> Groq:
@@ -36,7 +36,7 @@ def generate(
     system: str = "You are a helpful AI study assistant.",
     model: str = DEFAULT_MODEL,
     temperature: float = 0.4,
-    max_tokens: int = 2048,
+    max_tokens: int = 1800,
 ) -> str:
     """
     Send a chat-completion request to Groq and return the response text.
@@ -63,7 +63,7 @@ def generate_large(
     prompt: str,
     system: str = "You are a helpful AI study assistant.",
     temperature: float = 0.4,
-    max_tokens: int = 4096,
+    max_tokens: int = 1800,
 ) -> str:
     """Use the larger model for tasks that need deeper reasoning."""
     return generate(prompt, system=system, model=LARGE_MODEL,

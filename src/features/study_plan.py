@@ -88,4 +88,4 @@ Structure the plan as:
 
 Be realistic about the time available and prioritise the most important topics.
 """
-    return generate_large(prompt, system=SYSTEM, max_tokens=4096)
+    return generate_large(prompt, system=SYSTEM, max_tokens=1800)

@@ -119,6 +119,6 @@ Explanation: [1-2 sentence explanation of why the answer is correct]
 
 Generate all {num_questions} questions now.
 """
-    raw = generate_large(prompt, system=SYSTEM, max_tokens=4096)
+    raw = generate_large(prompt, system=SYSTEM, max_tokens=1800)
     questions = _parse_mcqs(raw)
     return raw, questions
